@@ -1,6 +1,5 @@
 # MameVHDL
-MameVHDL source code
-XText project, using C++/MAME grammar.
+MameVHDL source code : XText project, using C++/MAME grammar.
 
 Download XText "Full Eclipse" at https://eclipse.org/Xtext/download.html
 
