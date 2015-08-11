@@ -12,3 +12,5 @@ Do generate all on opened genmodel files (right click on root element), it must 
 Some java files ares missing on generated projets, do add them into the previously generated "MameVHDLModel" project :
 * src/enumportbit/*.java
 * src/enumromload/*.java
+
+Launch the "com.wordpress.mamevhdl.ui" project as "Eclipse Application", do create a new "MameModel Model" file :)
