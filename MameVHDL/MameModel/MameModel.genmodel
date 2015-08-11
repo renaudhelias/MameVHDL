@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/MameVHDLModel/src" modelPluginID="MameVHDLModel"
+    modelName="MameModel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>MameModel.ecore</foreignModel>
+  <genPackages prefix="MameModel" disposableProviderFactory="true" ecorePackage="MameModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MameModel.ecore#//EnumGameFlag">
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumGameFlag/GAME_NOT_WORKING"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumGameFlag/GAME_UNEMULATED_PROTECTION"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumGameFlag/GAME_WRONG_COLORS"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumGameFlag/GAME_IMPERFECT_COLORS"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumGameFlag/GAME_IMPERFECT_GRAPHICS"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumGameFlag/GAME_NO_COCKTAIL"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumGameFlag/GAME_NO_SOUND"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumGameFlag/GAME_IMPERFECT_SOUND"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumGameFlag/GAME_SUPPORTS_SAVE"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumGameFlag/NOT_A_DRIVER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MameModel.ecore#//EnumCode">
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumCode/SEQ_TYPE_STANDARD"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumCode/SEQ_TYPE_DECREMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumCode/SEQ_TYPE_INCREMENT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MameModel.ecore#//EnumScreen">
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumScreen/INVALID"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumScreen/RASTER"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumScreen/VECTOR"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumScreen/LCD"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MameModel.ecore#//EnumCallback">
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumCallback/STATIC"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumCallback/DRIVER"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumCallback/DEVICE"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumCallback/HANDLER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MameModel.ecore#//EnumDriverCallback">
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumDriverCallback/CB_MACHINE_START"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumDriverCallback/CB_MACHINE_RESET"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumDriverCallback/CB_SOUND_START"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumDriverCallback/CB_SOUND_RESET"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumDriverCallback/CB_PALETTE_INIT"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumDriverCallback/CB_VIDEO_START"/>
+      <genEnumLiterals ecoreEnumLiteral="MameModel.ecore#//EnumDriverCallback/CB_VIDEO_RESET"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="MameModel.ecore#//HashMap">
+      <genTypeParameters ecoreTypeParameter="MameModel.ecore#//HashMap/K"/>
+      <genTypeParameters ecoreTypeParameter="MameModel.ecore#//HashMap/V"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="MameModel.ecore#//EnumROMFlag"/>
+    <genDataTypes ecoreDataType="MameModel.ecore#//EnumPortFlag"/>
+    <genClasses ecoreClass="MameModel.ecore#//Game">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Game/year"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Game/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Game/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Game/machine"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Game/input"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Game/init"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Game/monitor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Game/company"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Game/fullname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Game/flags"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Game/machineConfig"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Game/regions"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//MachineConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//MachineConfig/_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//MachineConfig/_class"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//MachineConfig/devices"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//MachineConfig/minimumQuantum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//MachineConfig/perfectCPUQuantum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//MachineConfig/watchdogVBlankCount"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//MachineConfig/watchdogTime"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//MachineConfig/nvram"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//MachineConfig/memcard"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//MachineConfig/gfx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//MachineConfig/videoAttributes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//MachineConfig/totalColors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//MachineConfig/defaultLayout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//MachineConfig/callbacks"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//Device">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Device/_tag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Device/_type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Device/_clock"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Device/interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Device/periodicInt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MameModel.ecore#//Device/vblankInt"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//CPU">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//CPU/programMap"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//CPU/ioMap"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="MameModel.ecore#//Map">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Map/ranges"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Map/address_map_umap"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//ProgramMap"/>
+    <genClasses ecoreClass="MameModel.ecore#//IOMap"/>
+    <genClasses ecoreClass="MameModel.ecore#//Sound">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Sound/_config"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Sound/soundRoutes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Sound/_discrete"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//SoundRoute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//SoundRoute/output"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//SoundRoute/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//SoundRoute/gain"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//SoundRoute/input"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//Screen">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Screen/typeScreen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Screen/refresh"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Screen/vBlankTime"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Screen/raw"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Screen/size"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Screen/visArea"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Screen/defaultPosition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Screen/update"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Screen/vBlank"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//Timer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Timer/callback"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Timer/period"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Timer/screen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Timer/firstVpos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Timer/increment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Timer/startDelay"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Timer/param"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Timer/ptr"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//Range">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Range/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Range/end"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Range/ams"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Range/mask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Range/mirror"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="MameModel.ecore#//AM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AM/write"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AM/read"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//RAMAM"/>
+    <genClasses ecoreClass="MameModel.ecore#//ROMAM"/>
+    <genClasses ecoreClass="MameModel.ecore#//RegionAM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//RegionAM/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//RegionAM/offset"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//HandlerAM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//HandlerAM/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//HandlerAM/dev_class"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//HandlerAM/function"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//HandlerAM/sourceCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//HandlerAM/dev_tag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//HandlerAM/dev_type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//HandlerAM/dev_member"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//HandlerAM/device"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//HandlerAM/dev_param"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//ReadPortAM">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//ReadPortAM/port"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//Port">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Port/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Port/portbits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Port/portdips"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Port/portadjusters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Port/portconfs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Port/portservices"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//PortBit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortBit/mask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortBit/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortBit/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortBit/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortBit/_player"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortBit/_impulseDuration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortBit/flags"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//PortBit/codes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//PortBit/analogsettings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//PortBit/handlers"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//PortDipName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortDipName/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//PortDipName/settings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortDipName/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortDipName/mask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortDipName/_location"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//PortDipSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortDipSetting/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortDipSetting/default"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//PortDipSetting/condition"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//Interface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Interface/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//Interface/connexions"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//Connexion"/>
+    <genClasses ecoreClass="MameModel.ecore#//UnMapAM"/>
+    <genClasses ecoreClass="MameModel.ecore#//BaseAM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//BaseAM/base_pointer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//BaseAM/struct"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//BaseAM/member"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//SizeAM">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//SizeAM/size_pointer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//SizeAM/struct"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//SizeAM/member"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//ROMRegion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ROMRegion/tag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ROMRegion/length"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//ROMRegion/loads"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ROMRegion/flags"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//ROMXLoad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ROMXLoad/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ROMXLoad/offset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ROMXLoad/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ROMXLoad/hash"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ROMXLoad/flags"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ROMXLoad/srcoffs"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//PortAdjuster">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortAdjuster/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortAdjuster/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//Code">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Code/which"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Code/code"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//PortConfName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortConfName/mask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortConfName/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortConfName/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//PortConfName/settings"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//PortConfSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortConfSetting/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortConfSetting/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//PortService">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortService/mask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortService/default"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortService/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortService/_location"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//AnalogSettings">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AnalogSettings/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AnalogSettings/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AnalogSettings/sensitivity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AnalogSettings/keyDelta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AnalogSettings/centerDelta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AnalogSettings/crosshairAxis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AnalogSettings/crosshairScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AnalogSettings/crosshairOffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AnalogSettings/crosshairAltaxis"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//AnalogSettings/remapTable"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//PortCondition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortCondition/tag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortCondition/mask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortCondition/condition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//PortCondition/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//GFXEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXEntry/region"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXEntry/offset"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//GFXEntry/layout"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXEntry/start"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXEntry/colors"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXEntry/xScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXEntry/yScale"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//GFXLayout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXLayout/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXLayout/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXLayout/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXLayout/total"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXLayout/planes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXLayout/planeOffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXLayout/xOffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXLayout/yOffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXLayout/charIncrement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXLayout/raw"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//ScreenRaw">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenRaw/pixClock"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenRaw/hTotal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenRaw/hbEnd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenRaw/hbStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenRaw/vTotal"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenRaw/vbEnd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenRaw/vbStart"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//ScreenSize">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenSize/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenSize/height"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//ScreenVisibleArea">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenVisibleArea/minX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenVisibleArea/maxX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenVisibleArea/minY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenVisibleArea/maxY"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//ScreenDefaultPosition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenDefaultPosition/xScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenDefaultPosition/xOffs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenDefaultPosition/yScale"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//ScreenDefaultPosition/yOffs"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//Callback">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Callback/callback"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Callback/callbackType"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//GFXDecode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//GFXDecode/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameModel.ecore#//GFXDecode/gfxEntry"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//DevicePeriodicInt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//DevicePeriodicInt/rate"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//Speaker">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Speaker/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Speaker/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//Speaker/z"/>
+    </genClasses>
+    <genClasses ecoreClass="MameModel.ecore#//DriverCallback">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//DriverCallback/func"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//DriverCallback/class"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="MameModel.ecore#//Serializable"/>
+    <genClasses ecoreClass="MameModel.ecore#//DeviceVblankInt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameModel.ecore#//DeviceVblankInt/tag"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

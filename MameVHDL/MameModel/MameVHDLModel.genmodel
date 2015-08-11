@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/MameVHDLModel/src" modelPluginID="MameVHDLModel"
+    modelName="MameVHDLModel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>MameVHDLModel.ecore</foreignModel>
+  <genPackages prefix="MameVHDLModel" disposableProviderFactory="true" ecorePackage="MameVHDLModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="MameVHDLModel.ecore#//Control">
+      <genEnumLiterals ecoreEnumLiteral="MameVHDLModel.ecore#//Control/RD"/>
+      <genEnumLiterals ecoreEnumLiteral="MameVHDLModel.ecore#//Control/WR"/>
+    </genEnums>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//Schematic">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Schematic/devices"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Schematic/ports"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Schematic/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//Device">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Device/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Device/clock"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Device/provideBus"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Device/useBus"/>
+      <genFeatures children="true" createChild="true" propertyDescription="" propertySortChoices="true"
+          ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Device/components"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//Bus">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Bus/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Bus/addressSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Bus/dataSize"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Bus/clocks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Bus/pull"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Bus/controls"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//Clock">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Clock/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Clock/frequency"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//Component">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Component/handlers"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Component/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//Handler">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Handler/name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Handler/connexions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="MameVHDLModel.ecore#//Connexion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Connexion/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//ConnexionBus">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//ConnexionBus/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//ConnexionBus/rangeFixeFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//ConnexionBus/rangeFixeTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//ConnexionBus/rangeNonFixeFrom"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//ConnexionBus/rangeNonFixeTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//ConnexionBus/fixeValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//ConnexionBus/rangeStart"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//ConnexionBus/rangeEnd"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//ConnexionBus/mirror"/>
+      <genFeatures children="true" createChild="true" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//ConnexionBus/controls"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//ConnexionHandler">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//ConnexionHandler/target"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//ConnexionPort">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//ConnexionPort/target"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//Port">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Port/portBits"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Port/portDips"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//Port/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Port/connexionBus"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Port/useBus"/>
+      <genFeatures children="true" createChild="true" propertyCategory="" propertySortChoices="true"
+          ecoreFeature="ecore:EReference MameVHDLModel.ecore#//Port/usePortConnexion"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//PortBit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//PortBit/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//PortBit/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//PortBit/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//PortBit/active"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//PortDip">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//PortDip/name"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference MameVHDLModel.ecore#//PortDip/portDipSetting"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//PortDip/p_from"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//PortDip/p_to"/>
+    </genClasses>
+    <genClasses ecoreClass="MameVHDLModel.ecore#//PortDipSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//PortDipSetting/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MameVHDLModel.ecore#//PortDipSetting/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
