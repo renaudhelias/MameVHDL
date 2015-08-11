@@ -13,4 +13,4 @@ Some java files ares missing on generated projets, do add them into the previous
 * src/enumportbit/*.java
 * src/enumromload/*.java
 
-Launch the "com.wordpress.mamevhdl.ui" project as "Eclipse Application", do create a new "MameModel Model" file :)
+Launch the "com.wordpress.mamevhdl.ui" project as "Eclipse Application", do create a new "MameModel Model" file in an empty project :)
