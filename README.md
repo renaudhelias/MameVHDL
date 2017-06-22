@@ -27,8 +27,6 @@ The "system bus" pattern is really slow to synthetis (compile), I succeed refact
 But all of this is not the reason of stopping this project. Main one is that I'm focussed on another project : CoreAmstrad. Could you clone me please ?
 
 # MameVHDL demos
-(http://www.youtube.com/watch?v=oSzX0kn6JSQ)
-
 [![MameVHDL demo 1](http://img.youtube.com/vi/5K35K_MH2G4/0.jpg)](http://www.youtube.com/watch?v=5K35K_MH2G4)
 
 [![MameVHDL demo 1.2](http://img.youtube.com/vi/w0qqnPUjKfc/0.jpg)](http://www.youtube.com/watch?v=w0qqnPUjKfc)
