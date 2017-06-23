@@ -24,8 +24,6 @@ The model2text technology I did use does disappears (deprecated). A problem with
 
 The "system bus" pattern is really slow to synthetis (compile), I succeed refactoring only one small VHDL project with this pattern (Space Invaders arcade). Bidirectionnal wires in FPGA project is not a nice idea, the less you have the better it is.
 
-But all of this is not the reason of stopping this project. Main one is that I'm focussed on another project : CoreAmstrad. Could you clone me please ?
-
 # MameVHDL demos
 [![MameVHDL demo 1](http://img.youtube.com/vi/5K35K_MH2G4/0.jpg)](http://www.youtube.com/watch?v=5K35K_MH2G4)
 
